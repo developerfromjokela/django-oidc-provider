@@ -241,7 +241,6 @@ def userinfo(request, *args, **kwargs):
     token = kwargs['token']
 
     dic = {
-        'sub': token.id_token.get('sub'),
     }
 
     standard_claims = StandardScopeClaims(token)
