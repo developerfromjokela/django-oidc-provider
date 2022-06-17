@@ -127,7 +127,7 @@ class StandardScopeClaims(ScopeClaims):
 
     def scope_profile(self):
         dic = {
-            'sub': self.userinfo.get('sub') or getattr(self.user, 'id', None)
+            'sub': self.userinfo.get('sub') or getattr(self.user, 'id', None),
             'name': self.userinfo.get('name'),
             'given_name': (self.userinfo.get('given_name') or
                            getattr(self.user, 'first_name', None)),
